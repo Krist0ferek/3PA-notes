@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #guzik1{
+            background-color: wheat;
+            font-family: sans-serif;
+            outline: 1px red dotted;
+        }
+        #guzik2{
+            background-color: wheat;
+            font-family: sans-serif;
+            outline: 1px red dotted;
+        }
+        #guzik3{
+            background-color: wheat;
+            font-family: sans-serif;
+            outline: 1px red dotted;
+        }
+        div{
+            display: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <button id="guzik1">meow 1</button>
+    <button id="guzik2">meow 2</button>
+    <button id="guzik3">meow 3</button>
+    <div id="div1">kitty1</div>
+    <div id="div2">kitty2</div>
+    <div id="div3">kitty3</div>
+
+    <script>
+        let guzik1 = document.querySelector("#guzik1")
+        let guzik2 = document.querySelector("#guzik2")
+        let guzik3 = document.querySelector("#guzik3")
+
+        let div1 = document.querySelector("#div1")
+        let div2 = document.querySelector("#div2")
+        let div3 = document.querySelector("#div3")
+        
+        guzik1.addEventListener("click",function(){
+            div1.style.display = "block"
+            div2.style.display = "none"
+            div3.style.display = "none"
+        })
+
+        guzik2.addEventListener("click",function(){
+            div1.style.display = "none"
+            div2.style.display = "block"
+            div3.style.display = "none"
+        })
+        guzik3.addEventListener("click",function(){
+            div1.style.display = "none"
+            div2.style.display = "none"
+            div3.style.display = "block"
+        })
+    </script>
+</body>
+</html>
