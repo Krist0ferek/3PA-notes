@@ -24,10 +24,21 @@
      <script>
           document.querySelector("#dodaj").addEventListener("click",function(){
                let obraz = document.querySelector("#plik")
-               let liczbak = document.querySelector("#l_kopii")
-               let papier =  document.querySelector("input[name=radio]:checked")
+               let liczbak = document.querySelector("#l_kopii").value
+               let papier_cena = document.querySelector("input[name='1']:checked").value 
                let zdj = document.createElement("img")
                zdj.src = URL.createObjectURL(document.querySelector("#plik").files[0])
+
+
+               let cena_paragraf = document.createElement("p")
+               let liczba_kopii = document.createElement("p")
+               let cena = liczbak * papier_cena
+               cena_paragraf.innerHTML="cena to: "+cena
+               liczba_kopii.innerHTML="liczba kopii: "+liczbak
+
+               document.querySelector("#koszyk").appendChild(cena_paragraf)
+               document.querySelector("#koszyk").appendChild(liczba_kopii)
+               
 
                document.querySelector("#koszyk").appendChild(zdj)
           })
