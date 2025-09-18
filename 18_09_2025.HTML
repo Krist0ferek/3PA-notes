@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="numb1">
+    <input type="number" id="numb2">
+    <button id="btn">oblicz</button>
+    <p id="parag"></p>
+
+    <script>
+        document.querySelector("#btn").addEventListener("click",function(){
+
+        let liczba1= parseInt(document.querySelector("#numb1").value)
+        let liczba2=parseInt(document.querySelector("#numb2").value)
+        suma = liczba1+liczba2
+        pitagoras_suma = Math.sqrt(Math.pow(liczba1,2)+Math.pow(liczba2,2))
+
+        alert(liczba1+liczba2)
+        console.log(liczba1+liczba2)
+        //document.write(liczba1+liczba2)
+        document.querySelector("#parag").innerHTML = "wzorem pitagorasa c jest: " + pitagoras_suma
+        })
+    </script>
+</body>
+</html>
