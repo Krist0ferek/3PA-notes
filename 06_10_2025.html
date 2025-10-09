@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    szerokosc<input type="text" id="szerokosc"><br>
+    dlugosc<input type="text" id="dlugosc"><br>
+    typ panelu<br>
+    <input type="radio" name="rodzaj" value="12">Panele laminowane</input>
+    <input type="radio" name="rodzaj" value="14">Panele winylowe</input>
+    <input type="radio" name="rodzaj" value="18">Deska podłogowa</input><br>
+    <button>oblicz</button><br>
+    
+    
+    <script>
+document.querySelector("button").addEventListener("click",function(){
+    let szerok = parseFloat(document.querySelector("#szerokosc").value)
+    let dlug = parseFloat(document.querySelector("#dlugosc").value)
+    let typ = parseFloat(document.querySelector("input[name=rodzaj]:checked").value)
+
+    let pole = szerok*dlug
+    let suma =szerok*dlug*typ
+    document.querySelector("p").innerHTML = "Pole powierzchni pomieszczenia: "+pole+" koszt montażu: "+suma
+})
+
+    </script>
+</body>
+</html>
